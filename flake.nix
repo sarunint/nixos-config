@@ -10,7 +10,7 @@
     nixosConfigurations.sarunint-nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix
+        ./nixos-configurations/sarunint-nixos/configuration.nix
       ];
     };
     
