@@ -60,6 +60,13 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
+  fileSystems."/harddisk" = 
+    {
+      device = "/dev/disk/by-uuid/584C-6C26";
+      fsType = "exfat";
+      options = [ "uid=sarunint" "gid=users" ];
+    };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/9135cf87-24a1-4464-9586-b4967cde6e22"; }
     ];
