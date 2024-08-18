@@ -14,5 +14,7 @@
     ./sound.nix
     ./timezone.nix
     ./unfree.nix
+    ./programs/gnupg.nix
+    ./users/sarunint.nix
   ];
 }
