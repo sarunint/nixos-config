@@ -8,22 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../common/boot-loader.nix
+      ../common/common.nix
       ./network.nix
-      ../common/desktop.nix
-      ../common/timezone.nix
-      ../common/locale.nix
-      ../common/font-config.nix
       ./sound.nix
-      ../common/flatpak.nix
-      ../common/unfree.nix
-      ../common/users/sarunint.nix
-      ../common/packages.nix
-      ../common/programs/gnupg.nix
-      ../common/nix-config.nix
       ./state-version.nix
-      ../common/disable-mutable-users.nix
-      ../common/kernel.nix
     ];
 
   # Configure keymap in X11
