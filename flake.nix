@@ -7,11 +7,20 @@
 
   outputs = { nixpkgs, ... } @ inputs: {
 
-    nixosConfigurations.sarunint-nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-      modules = [
-        ./nixos-configurations/sarunint-nixos/configuration.nix
-      ];
+    nixosConfigurations = {
+      sarunint-nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./nixos-configurations/sarunint-nixos/configuration.nix
+        ];
+      };
+
+      sarunint-workstation-nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./nixos-configurations/sarunint-workstation-nixos/configuration.nix
+        ];
+      };
     };
     
   };
