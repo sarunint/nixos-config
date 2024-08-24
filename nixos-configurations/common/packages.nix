@@ -12,5 +12,7 @@
     git
     nil
     vscode-fhs
+    prismlauncher
+    ferium
   ];
 }
