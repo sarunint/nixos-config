@@ -14,5 +14,7 @@
     vscode-fhs
     prismlauncher
     ferium
+    pass-wayland
+    qtpass
   ];
 }
