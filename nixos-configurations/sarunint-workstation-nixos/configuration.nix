@@ -13,6 +13,7 @@
       ./network.nix
       ./users/sarunint.nix
       ./state-version.nix
+      ./wireguard.nix
     ];
 
   # Configure keymap in X11
