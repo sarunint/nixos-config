@@ -16,5 +16,8 @@
     ferium
     pass-wayland
     qtpass
+    qpwgraph
+    xwaylandvideobridge
+    vlc
   ];
 }
