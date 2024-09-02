@@ -19,5 +19,6 @@
     qpwgraph
     xwaylandvideobridge
     vlc
+    gimp
   ];
 }
