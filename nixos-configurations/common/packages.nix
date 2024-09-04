@@ -20,5 +20,6 @@
     xwaylandvideobridge
     vlc
     gimp
+    hw-probe
   ];
 }
