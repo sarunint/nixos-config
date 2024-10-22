@@ -21,5 +21,6 @@
     vlc
     gimp
     hw-probe
+    kdePackages.krdc
   ];
 }

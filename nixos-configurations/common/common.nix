@@ -17,5 +17,6 @@
     ./programs/gnupg.nix
     ./users/sarunint.nix
     ./hardware-clock.nix
+    ./cloudflare-warp.nix
   ];
 }
