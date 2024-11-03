@@ -18,5 +18,6 @@
     ./users/sarunint.nix
     ./hardware-clock.nix
     ./cloudflare-warp.nix
+    ./ntfs.nix
   ];
 }
