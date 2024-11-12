@@ -19,5 +19,6 @@
     ./hardware-clock.nix
     ./cloudflare-warp.nix
     ./ntfs.nix
+    ./hyprland.nix
   ];
 }
