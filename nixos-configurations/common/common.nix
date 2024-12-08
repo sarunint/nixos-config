@@ -20,5 +20,6 @@
     ./cloudflare-warp.nix
     ./ntfs.nix
     ./hyprland.nix
+    ./java.nix
   ];
 }

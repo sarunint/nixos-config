@@ -22,5 +22,8 @@
     gimp
     hw-probe
     kdePackages.krdc
+    jdk8
+    jdk17
+    jdk21
   ];
 }
