@@ -14,6 +14,7 @@
       ./users/sarunint.nix
       ./state-version.nix
       ./wireguard.nix
+      ./hosts.nix
     ];
 
   # Configure keymap in X11
