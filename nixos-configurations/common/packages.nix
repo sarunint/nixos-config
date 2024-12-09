@@ -10,7 +10,8 @@
     efibootmgr
     file
     git
-    nil
+    nixd
+    nixfmt-rfc-style
     vscode-fhs
     prismlauncher
     ferium
