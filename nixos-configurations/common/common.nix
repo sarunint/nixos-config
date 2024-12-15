@@ -15,6 +15,7 @@
     ./timezone.nix
     ./unfree.nix
     ./programs/gnupg.nix
+    ./programs/kde-connect.nix
     ./users/sarunint.nix
     ./hardware-clock.nix
     ./cloudflare-warp.nix
