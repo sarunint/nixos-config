@@ -22,6 +22,6 @@
     ./ntfs.nix
     ./hyprland.nix
     ./java.nix
-    # ./firewall.nix
+    ./firewall.nix
   ];
 }
