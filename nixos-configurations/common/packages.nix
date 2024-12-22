@@ -26,5 +26,6 @@
     jdk8
     jdk17
     jdk21
+    kdePackages.partitionmanager
   ];
 }
