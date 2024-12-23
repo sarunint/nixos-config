@@ -23,5 +23,6 @@
     ./hyprland.nix
     ./java.nix
     ./firewall.nix
+    ./mount-efi-partitions.nix
   ];
 }
