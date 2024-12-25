@@ -16,6 +16,7 @@
     ./unfree.nix
     ./programs/gnupg.nix
     ./programs/kde-connect.nix
+    ./programs/virt-manager.nix
     ./users/sarunint.nix
     ./hardware-clock.nix
     ./cloudflare-warp.nix
