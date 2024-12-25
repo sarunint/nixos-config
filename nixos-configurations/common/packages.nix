@@ -27,5 +27,6 @@
     jdk17
     jdk21
     kdePackages.partitionmanager
+    virt-manager
   ];
 }
