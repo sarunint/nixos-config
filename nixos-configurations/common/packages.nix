@@ -14,7 +14,7 @@
     nixfmt-rfc-style
     vscode-fhs
     prismlauncher
-    inputs.packages.x86_64-linux.ferium
+    inputs.self.packages.x86_64-linux.ferium
     pass-wayland
     qtpass
     qpwgraph
