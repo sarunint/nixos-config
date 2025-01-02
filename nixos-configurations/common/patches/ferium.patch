@@ -1,0 +1,52 @@
+From 48531ac1f47b968470775d42e21097bd99d7a847 Mon Sep 17 00:00:00 2001
+From: Thom <14987462+thomhayward@users.noreply.github.com>
+Date: Wed, 2 Oct 2024 11:42:43 +0100
+Subject: [PATCH] Fix simultaneous downloads (#433)
+
+Acquire a semaphore permit while executing each download task, instead
+of while _creating_ each download task.
+- Fixes #370
+- Prevents deadlocking when downloading more than 75 mods
+- Aet reasonable number of concurrent downloads
+- Don't wrap `request::Client` in an `Arc`
+	`request::Client` is just an `Arc` wrapper around its own internal type anyway.
+---
+ src/download.rs | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+diff --git a/src/download.rs b/src/download.rs
+index 00d8802..3f6db30 100644
+--- a/src/download.rs
++++ b/src/download.rs
+@@ -19,6 +19,8 @@ use std::{
+ };
+ use tokio::sync::Semaphore;
+ 
++const CONCURRENT_DOWNLOADS: usize = 6;
++
+ /// Check the given `directory`
+ ///
+ /// - If there are files there that are not in `to_download` or `to_install`, they will be moved to `directory`/.old
+@@ -113,17 +115,17 @@ pub async fn download(
+         .expect("Mutex poisoned")
+         .enable_steady_tick(Duration::from_millis(100));
+     let mut tasks = FuturesUnordered::new();
+-    let semaphore = Arc::new(Semaphore::new(75));
+-    let client = Arc::new(reqwest::Client::new());
++    let semaphore = Arc::new(Semaphore::new(CONCURRENT_DOWNLOADS));
++    let client = reqwest::Client::new();
+ 
+     for downloadable in to_download {
+-        let permit = Arc::clone(&semaphore).acquire_owned().await?;
++        let semaphore = Arc::clone(&semaphore);
+         let progress_bar = Arc::clone(&progress_bar);
+-        let client = Arc::clone(&client);
++        let client = client.clone();
+         let output_dir = output_dir.clone();
+ 
+         tasks.push(async move {
+-            let _permit = permit;
++            let _permit = semaphore.acquire_owned().await?;
+             let (length, filename) = downloadable
+                 .download(&client, &output_dir, |additional| {
+                     progress_bar
