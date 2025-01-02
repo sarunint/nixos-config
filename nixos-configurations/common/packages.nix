@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   # List packages installed in system profile. To search, run:
@@ -14,7 +14,7 @@
     nixfmt-rfc-style
     vscode-fhs
     prismlauncher
-    ferium
+    inputs.packages.x86_64-linux.ferium
     pass-wayland
     qtpass
     qpwgraph
