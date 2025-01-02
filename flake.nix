@@ -23,7 +23,7 @@
       };
     };
 
-    packages.x86_64-linux.ferium = nixpkgs.ferium.overrideAttrs {
+    packages.x86_64-linux.ferium = nixpkgs.legacyPackages.x86_64-linux.ferium.overrideAttrs {
       patches = [
         ./nixos-configurations/common/patches/ferium.patch
       ];
