@@ -5,8 +5,11 @@
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
-  outputs = { nixpkgs, ... } @ inputs: {
-
+  outputs = { nixpkgs, ... } @ inputs:
+  let
+    pkgs = nixpkgs.legacyPackages.x86_64-linux;
+  in
+  {
     nixosConfigurations = {
       sarunint-nixos = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
@@ -23,11 +26,12 @@
       };
     };
 
-    packages.x86_64-linux.ferium = nixpkgs.legacyPackages.x86_64-linux.ferium.overrideAttrs {
+    packages.x86_64-linux.ferium = pkgs.ferium.overrideAttrs {
       patches = [
         ./nixos-configurations/common/patches/ferium.patch
       ];
     };
-    
+
+    devShells.x86_64-linux.rust = (import ./dev-shells/rust.nix { inherit pkgs; });
   };
 }
