@@ -26,5 +26,6 @@
     ./firewall.nix
     ./mount-efi-partitions.nix
     ./yubikey.nix
+    ./kde.nix
   ];
 }
