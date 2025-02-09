@@ -6,7 +6,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
 
-  outputs = { nixpkgs, ... } @ inputs:
+  outputs = { nixpkgs, nixpkgs-stable, ... } @ inputs:
   let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in
@@ -23,6 +23,13 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./nixos-configurations/sarunint-workstation-nixos/configuration.nix
+        ];
+      };
+
+      sarunint-live-cd = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./nixos-configurations/sarunint-live-cd/configuration.nix
         ];
       };
     };
