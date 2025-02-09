@@ -6,7 +6,7 @@
     nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
   };
 
-  outputs = { nixpkgs, nixpkgs-stable, ... } @ inputs:
+  outputs = { self, nixpkgs, nixpkgs-stable, ... } @ inputs:
   let
     pkgs = nixpkgs.legacyPackages.x86_64-linux;
   in
@@ -41,5 +41,7 @@
     };
 
     devShells.x86_64-linux.rust = (import ./dev-shells/rust/rust.nix { inherit pkgs; });
+
+    packages.x86_64-linux.sarunint-live-cd = self.nixosConfigurations.sarunint-live-cd.config.system.build.isoImage;
   };
 }
