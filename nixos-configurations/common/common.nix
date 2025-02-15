@@ -28,5 +28,6 @@
     ./yubikey.nix
     ./kde.nix
     ./adb.nix
+    ./programs/browserpass.nix
   ];
 }
