@@ -29,5 +29,6 @@
     ./kde.nix
     ./adb.nix
     ./programs/browserpass.nix
+    ./programs/firefox.nix
   ];
 }
