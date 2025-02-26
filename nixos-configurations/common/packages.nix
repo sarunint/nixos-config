@@ -18,7 +18,6 @@
     pass-wayland
     qtpass
     qpwgraph
-    xwaylandvideobridge
     vlc
     gimp
     hw-probe
