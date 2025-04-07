@@ -31,5 +31,6 @@
     ./programs/browserpass.nix
     ./programs/firefox.nix
     ./programs/nix-ld.nix
+    ./appstream.nix
   ];
 }
