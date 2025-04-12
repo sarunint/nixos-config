@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ ... }:
+{ inputs, ... }:
 
 {
   imports =
@@ -15,6 +15,8 @@
       ./state-version.nix
       ./wireguard.nix
       ./hosts.nix
+      inputs.prism-meta.nixosModules.default
+      ./prism-meta.nix
     ];
 
   # Configure keymap in X11
