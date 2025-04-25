@@ -27,7 +27,7 @@
     jdk21
     kdePackages.partitionmanager
     scrcpy
-    musescore
+    inputs.self.packages.musescore
     muse-sounds-manager
   ];
 }
