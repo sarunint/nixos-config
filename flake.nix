@@ -46,7 +46,7 @@
       };
       musescore = pkgs.musescore.overrideAttrs {
         version = "4.5.2";
-        src = nixpkgs.lib.fetchFromGitHub {
+        src = pkgs.fetchFromGitHub {
           owner = "musescore";
           repo = "MuseScore";
           rev = "v4.5.2";
