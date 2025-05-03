@@ -38,23 +38,6 @@
       };
     };
 
-    packages.x86_64-linux = { 
-      ferium = pkgs.ferium.overrideAttrs {
-        patches = [
-          ./nixos-configurations/common/patches/ferium.patch
-        ];
-      };
-      musescore = pkgs.musescore.overrideAttrs {
-        version = "4.5.2";
-        src = pkgs.fetchFromGitHub {
-          owner = "musescore";
-          repo = "MuseScore";
-          rev = "v4.5.2";
-          sha256 = "sha256-9jafh9zyf+tuC+WU6nQIMBVm+Gqqcig8jS2R1h/YnIo=";
-        };
-      };
-    };
-
     devShells.x86_64-linux.rust = (import ./dev-shells/rust/rust.nix { inherit pkgs; });
     devShells.x86_64-linux.nodejs_18 = (import ./dev-shells/nodejs/18.nix { inherit pkgs; });
     devShells.x86_64-linux.nodejs_20 = (import ./dev-shells/nodejs/20.nix { inherit pkgs; });
