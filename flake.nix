@@ -38,6 +38,14 @@
       };
     };
 
+    packages.x86_64-linux = { 
+      ferium = pkgs.ferium.overrideAttrs {
+        patches = [
+          ./nixos-configurations/common/patches/ferium.patch
+        ];
+      };
+    };
+
     devShells.x86_64-linux.rust = (import ./dev-shells/rust/rust.nix { inherit pkgs; });
     devShells.x86_64-linux.nodejs_18 = (import ./dev-shells/nodejs/18.nix { inherit pkgs; });
     devShells.x86_64-linux.nodejs_20 = (import ./dev-shells/nodejs/20.nix { inherit pkgs; });
