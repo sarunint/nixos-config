@@ -13,6 +13,7 @@
       ./network.nix
       ./state-version.nix
       ./fingerprint.nix
+      ./lanzaboote/extra-mount-points.nix
     ];
 
   # Configure keymap in X11
