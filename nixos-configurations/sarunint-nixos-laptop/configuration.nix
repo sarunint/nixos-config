@@ -14,6 +14,8 @@
       ./state-version.nix
       ./fingerprint.nix
       ./lanzaboote/extra-mount-points.nix
+      inputs.lanzaboote.nixosModules.lanzaboote
+      ./lanzaboote/lanzaboote.nix
     ];
 
   # Configure keymap in X11
