@@ -12,6 +12,7 @@
       ./boot-loader.nix
       ./network.nix
       ./state-version.nix
+      ./fingerprint.nix
     ];
 
   # Configure keymap in X11
