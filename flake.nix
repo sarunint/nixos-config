@@ -30,6 +30,13 @@
         ];
       };
 
+      sarunint-nixos-laptop = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./nixos-configurations/sarunint-nixos-laptop/configuration.nix
+        ];
+      };
+
       sarunint-live-cd = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
