@@ -17,6 +17,7 @@
       ./hosts.nix
       inputs.prism-meta.nixosModules.default
       ./prism-meta.nix
+      ./lanzaboote/extra-mount-points.nix
     ];
 
   # Configure keymap in X11
