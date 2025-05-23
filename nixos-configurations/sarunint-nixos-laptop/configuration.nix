@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./firmware-overlay.nix
       ../common/common.nix
       ./boot-loader.nix
       ./network.nix
