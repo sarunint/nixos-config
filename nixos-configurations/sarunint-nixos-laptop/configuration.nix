@@ -13,6 +13,7 @@
       ./network.nix
       ./state-version.nix
       ./fingerprint.nix
+      ./wifi7.nix
       ./lanzaboote/extra-mount-points.nix
       inputs.lanzaboote.nixosModules.lanzaboote
       ./lanzaboote/lanzaboote.nix
