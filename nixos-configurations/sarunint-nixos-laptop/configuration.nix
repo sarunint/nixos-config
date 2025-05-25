@@ -14,6 +14,7 @@
       ./network.nix
       ./state-version.nix
       ./fingerprint.nix
+      ./bluetooth.nix
       ./lanzaboote/extra-mount-points.nix
       inputs.lanzaboote.nixosModules.lanzaboote
       ./lanzaboote/lanzaboote.nix
