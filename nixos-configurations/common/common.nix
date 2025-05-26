@@ -32,5 +32,6 @@
     ./programs/firefox.nix
     ./programs/nix-ld.nix
     ./appstream.nix
+    ./r.nix
   ];
 }
