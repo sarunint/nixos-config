@@ -33,5 +33,6 @@
     ./programs/nix-ld.nix
     ./appstream.nix
     ./r.nix
+    ./plymouth.nix
   ];
 }
