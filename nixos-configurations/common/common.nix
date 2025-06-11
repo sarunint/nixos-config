@@ -34,5 +34,6 @@
     ./appstream.nix
     ./r.nix
     ./plymouth.nix
+    ./nh.nix
   ];
 }
