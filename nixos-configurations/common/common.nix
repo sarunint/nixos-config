@@ -35,5 +35,6 @@
     ./r.nix
     ./plymouth.nix
     ./nh.nix
+    ./printer.nix
   ];
 }
