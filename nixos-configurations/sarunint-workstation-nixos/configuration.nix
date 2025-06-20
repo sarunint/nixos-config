@@ -15,8 +15,8 @@
       ./state-version.nix
       ./wireguard.nix
       ./hosts.nix
-      inputs.prism-meta.nixosModules.default
-      ./prism-meta.nix
+      # inputs.prism-meta.nixosModules.default
+      # ./prism-meta.nix
       ./lanzaboote/extra-mount-points.nix
       inputs.lanzaboote.nixosModules.lanzaboote
       ./lanzaboote/lanzaboote.nix
