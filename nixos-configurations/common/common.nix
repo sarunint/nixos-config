@@ -36,5 +36,6 @@
     ./plymouth.nix
     ./nh.nix
     ./printer.nix
+    ./cisco-anyconnect.nix
   ];
 }
