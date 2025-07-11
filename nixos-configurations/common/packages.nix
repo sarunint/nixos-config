@@ -32,5 +32,6 @@
     libreoffice-qt6-fresh
     localsend
     rquickshare
+    kubernetes-helm
   ];
 }
