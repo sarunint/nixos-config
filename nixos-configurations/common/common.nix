@@ -38,5 +38,6 @@
     ./printer.nix
     ./cisco-anyconnect.nix
     ./gimp-overlay.nix
+    ./jdk8-overlay.nix
   ];
 }
