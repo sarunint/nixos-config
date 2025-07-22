@@ -33,5 +33,7 @@
     localsend
     rquickshare
     kubernetes-helm
+    corefonts
+    vista-fonts
   ];
 }
