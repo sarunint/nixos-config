@@ -35,5 +35,6 @@
     kubernetes-helm
     corefonts
     vista-fonts
+    google-chrome
   ];
 }
