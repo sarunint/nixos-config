@@ -28,7 +28,7 @@
     kdePackages.partitionmanager
     scrcpy
     inputs.self.packages.x86_64-linux.musescore-appimage
-    muse-sounds-manager
+    inputs.self.packages.x86_64-linux.muse-sounds-manager
     libreoffice-qt6-fresh
     localsend
     rquickshare

@@ -16,7 +16,7 @@
 
   outputs = { self, nixpkgs, nixpkgs-stable, ... } @ inputs:
   let
-    pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    pkgs = import nixpkgs { system = "x86_64-linux"; config.allowUnfree = true; };
   in
   {
     nixosConfigurations = {
@@ -74,6 +74,7 @@
             cp -r ${appimageContents}/share/icons $out/share
           '';
         };
+      muse-sounds-manager = pkgs.callPackage ./packages/muse-sounds-manager.nix {};
     };
 
     devShells.x86_64-linux.rust = (import ./dev-shells/rust/rust.nix { inherit pkgs; });
