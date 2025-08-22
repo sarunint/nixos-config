@@ -74,7 +74,6 @@
             cp -r ${appimageContents}/share/icons $out/share
           '';
         };
-      muse-sounds-manager = pkgs.callPackage ./packages/muse-sounds-manager.nix {};
     };
 
     devShells.x86_64-linux.rust = (import ./dev-shells/rust/rust.nix { inherit pkgs; });
