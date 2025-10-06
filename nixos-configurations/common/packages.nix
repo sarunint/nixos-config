@@ -36,5 +36,6 @@
     corefonts
     vista-fonts
     google-chrome
+    musescore
   ];
 }
