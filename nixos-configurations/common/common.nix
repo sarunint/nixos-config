@@ -37,6 +37,6 @@
     ./nh.nix
     ./printer.nix
     ./cisco-anyconnect.nix
-    ./overlays/musescore.nix
+    ./overlays/soci.nix
   ];
 }
