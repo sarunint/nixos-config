@@ -3,7 +3,10 @@
 {
   users.users.sarunint = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [
+      "wheel" # Enable ‘sudo’ for the user.
+      "docker"
+    ]; 
     packages = with pkgs; [
       neovim
     ];
