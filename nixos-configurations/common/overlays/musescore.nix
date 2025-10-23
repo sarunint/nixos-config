@@ -24,8 +24,6 @@
             hash = "sha256-5v8CJfKC8RO9gzDfx0RjNkVElbIz9nmm8oPeN2o+NGA=";
           })
         ];
-
-        env.NIX_CFLAGS_COMPILE = "-Wno-interference-size";
       };
     }
    ) ];
