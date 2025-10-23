@@ -1,0 +1,25 @@
+From b31888d881d6d5c69f31fe29281daf5f6109b675 Mon Sep 17 00:00:00 2001
+From: Sarun Intaralawan <sarunint@sarunint.com>
+Date: Thu, 23 Oct 2025 17:23:51 +0700
+Subject: [PATCH 2/2] fix: import GuiPrivate
+
+---
+ src/appshell/CMakeLists.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/src/appshell/CMakeLists.txt b/src/appshell/CMakeLists.txt
+index 868dd99520..a1f5e30893 100644
+--- a/src/appshell/CMakeLists.txt
++++ b/src/appshell/CMakeLists.txt
+@@ -139,6 +139,8 @@ if (NOT OS_IS_MAC)
+     )
+ 
+     # we use QKeyMapper to fix https://github.com/musescore/MuseScore/issues/10181
++    find_package(Qt6 REQUIRED COMPONENTS GuiPrivate)
++    set(MODULE_LINK ${MODULE_LINK} Qt6::GuiPrivate)
+     set(MODULE_INCLUDE_PRIVATE ${Qt6Gui_PRIVATE_INCLUDE_DIRS} )
+ endif(NOT OS_IS_MAC)
+ 
+-- 
+2.51.0
+

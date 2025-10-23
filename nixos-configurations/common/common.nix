@@ -38,5 +38,6 @@
     ./printer.nix
     ./cisco-anyconnect.nix
     ./winboat.nix
+    ./overlays/musescore.nix
   ];
 }
