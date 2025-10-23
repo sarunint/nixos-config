@@ -1,7 +1,7 @@
 From b31888d881d6d5c69f31fe29281daf5f6109b675 Mon Sep 17 00:00:00 2001
 From: Sarun Intaralawan <sarunint@sarunint.com>
 Date: Thu, 23 Oct 2025 17:23:51 +0700
-Subject: [PATCH 2/2] fix: import GuiPrivate
+Subject: [PATCH 2/3] fix: import GuiPrivate
 
 ---
  src/appshell/CMakeLists.txt | 2 ++

@@ -1,0 +1,37 @@
+From ead213c5a4d270eca1f9cf49995449408b02a8ae Mon Sep 17 00:00:00 2001
+From: Sarun Intaralawan <sarunint@sarunint.com>
+Date: Thu, 23 Oct 2025 20:02:44 +0700
+Subject: [PATCH 3/3] remove private includes
+
+---
+ src/appshell/CMakeLists.txt                | 1 -
+ src/framework/accessibility/CMakeLists.txt | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/src/appshell/CMakeLists.txt b/src/appshell/CMakeLists.txt
+index a1f5e30893..9d9a6d1b33 100644
+--- a/src/appshell/CMakeLists.txt
++++ b/src/appshell/CMakeLists.txt
+@@ -141,7 +141,6 @@ if (NOT OS_IS_MAC)
+     # we use QKeyMapper to fix https://github.com/musescore/MuseScore/issues/10181
+     find_package(Qt6 REQUIRED COMPONENTS GuiPrivate)
+     set(MODULE_LINK ${MODULE_LINK} Qt6::GuiPrivate)
+-    set(MODULE_INCLUDE_PRIVATE ${Qt6Gui_PRIVATE_INCLUDE_DIRS} )
+ endif(NOT OS_IS_MAC)
+ 
+ if (QT_SUPPORT)
+diff --git a/src/framework/accessibility/CMakeLists.txt b/src/framework/accessibility/CMakeLists.txt
+index 38c830ef48..fa90d2da03 100644
+--- a/src/framework/accessibility/CMakeLists.txt
++++ b/src/framework/accessibility/CMakeLists.txt
+@@ -50,7 +50,6 @@ if (OS_IS_LIN)
+     # it needed to send a spontaneous event by activating navigation
+     find_package(Qt6 REQUIRED COMPONENTS CorePrivate)
+     set(MODULE_LINK ${MODULE_LINK} Qt6::CorePrivate)
+-    set(MODULE_INCLUDE_PRIVATE ${Qt6Core_PRIVATE_INCLUDE_DIRS})
+ endif()
+ 
+ 
+-- 
+2.51.0
+

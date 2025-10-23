@@ -19,6 +19,7 @@
           })
           ../patches/musescore/0001-fix-import-CorePrivate.patch
           ../patches/musescore/0002-fix-import-GuiPrivate.patch
+          ../patches/musescore/0003-remove-private-includes.patch
           (prev.fetchpatch2 {
             url = "https://patch-diff.githubusercontent.com/raw/musescore/MuseScore/pull/30422.patch";
             hash = "sha256-5v8CJfKC8RO9gzDfx0RjNkVElbIz9nmm8oPeN2o+NGA=";
