@@ -37,5 +37,6 @@
     vista-fonts
     google-chrome
     musescore
+    winboat
   ];
 }

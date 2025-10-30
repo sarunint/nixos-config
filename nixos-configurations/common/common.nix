@@ -37,6 +37,5 @@
     ./nh.nix
     ./printer.nix
     ./cisco-anyconnect.nix
-    ./winboat.nix
   ];
 }
