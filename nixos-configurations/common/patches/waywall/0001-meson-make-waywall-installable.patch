@@ -1,0 +1,40 @@
+From 19a2393d5d80f69fe66fb250dd5c0bd7f473f332 Mon Sep 17 00:00:00 2001
+From: Sarun Intaralawan <sarunint@sarunint.com>
+Date: Sun, 2 Nov 2025 17:32:34 +0700
+Subject: [PATCH] meson: make waywall installable
+
+---
+ Makefile            | 9 ++++++++-
+ waywall/meson.build | 1 +
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 8185d89..bcf44a0 100644
+--- a/Makefile
++++ b/Makefile
+@@ -31,4 +31,11 @@ lint: build/build.ninja
+ # non-PHONY
+ 
+ build/build.ninja:
+-	meson setup build
++	meson setup build \
++		--prefix=$(out) \
++		-Dauto_features=enabled \
++		-Dwrap_mode=nodownload \
++		--buildtype=plain
++
++install:
++	meson install -C build
+diff --git a/waywall/meson.build b/waywall/meson.build
+index 87c5298..e872f4d 100644
+--- a/waywall/meson.build
++++ b/waywall/meson.build
+@@ -55,4 +55,5 @@ executable('waywall',
+ 
+   dependencies: waywall_deps,
+   include_directories: includes,
++  install: true,
+ )
+-- 
+2.51.0
+

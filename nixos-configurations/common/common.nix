@@ -37,5 +37,6 @@
     ./nh.nix
     ./printer.nix
     ./cisco-anyconnect.nix
+    ./glfw-waywall-minecraft.nix
   ];
 }
