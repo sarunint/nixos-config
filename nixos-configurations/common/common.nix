@@ -38,5 +38,6 @@
     ./printer.nix
     ./cisco-anyconnect.nix
     ./glfw-waywall-minecraft.nix
+    ./nom-overlay.nix
   ];
 }
