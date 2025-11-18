@@ -37,7 +37,7 @@
     vista-fonts
     google-chrome
     musescore
-    winboat
+    # winboat
     inputs.self.packages.x86_64-linux.waywall
     inputs.self.packages.x86_64-linux.ninjabrain-bot
   ];
