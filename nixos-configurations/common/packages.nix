@@ -31,7 +31,7 @@
     muse-sounds-manager
     libreoffice-qt6-fresh
     localsend
-    # rquickshare
+    rquickshare
     kubernetes-helm
     corefonts
     vista-fonts
