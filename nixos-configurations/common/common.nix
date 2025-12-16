@@ -39,6 +39,5 @@
     ./cisco-anyconnect.nix
     ./glfw-waywall-minecraft.nix
     ./fwupd.nix
-    ./overlays/musescore.nix
   ];
 }
