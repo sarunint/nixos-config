@@ -43,5 +43,7 @@
     nix-output-monitor
     docker-compose
     podman-compose
+    docker
+    podman
   ];
 }
