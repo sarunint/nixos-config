@@ -6,6 +6,7 @@
     extraGroups = [
       "wheel" # Enable ‘sudo’ for the user.
       "docker"
+      "podman"
     ]; 
     packages = with pkgs; [
       neovim

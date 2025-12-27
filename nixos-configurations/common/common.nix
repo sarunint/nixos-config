@@ -40,5 +40,6 @@
     ./glfw-waywall-minecraft.nix
     ./fwupd.nix
     ./overlays/nix-output-monitor.nix
+    ./virtualisation.nix
   ];
 }
