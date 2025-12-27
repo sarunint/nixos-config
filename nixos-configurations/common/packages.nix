@@ -41,5 +41,7 @@
     inputs.self.packages.x86_64-linux.waywall
     inputs.self.packages.x86_64-linux.ninjabrain-bot
     nix-output-monitor
+    docker-compose
+    podman-compose
   ];
 }
