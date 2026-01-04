@@ -42,6 +42,5 @@
     ./overlays/nix-output-monitor.nix
     ./virtualisation.nix
     ./overlays/muse-sounds-manager.nix
-    ./overlays/rstudio.nix
   ];
 }
