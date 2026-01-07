@@ -27,7 +27,6 @@
     ./mount-efi-partitions.nix
     ./yubikey.nix
     ./kde.nix
-    ./adb.nix
     ./programs/browserpass.nix
     ./programs/firefox.nix
     ./programs/nix-ld.nix
