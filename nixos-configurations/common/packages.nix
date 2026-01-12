@@ -42,5 +42,6 @@
     inputs.self.packages.x86_64-linux.ninjabrain-bot
     nix-output-monitor
     android-tools
+    zotero
   ];
 }
