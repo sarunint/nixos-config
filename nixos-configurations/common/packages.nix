@@ -11,7 +11,7 @@
     file
     git
     nixd
-    nixfmt-rfc-style
+    nixfmt
     vscode-fhs
     prismlauncher
     inputs.self.packages.x86_64-linux.ferium
