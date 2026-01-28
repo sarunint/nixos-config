@@ -43,5 +43,6 @@
     nix-output-monitor
     android-tools
     zotero
+    inputs.self.packages.x86_64-linux.ivao-aurora
   ];
 }
