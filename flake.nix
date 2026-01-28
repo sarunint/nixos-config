@@ -75,6 +75,28 @@
             cp -r ${appimageContents}/share/icons $out/share
           '';
         };
+      ivao-aurora = let 
+        pname = "ivao-aurora";
+        version = "0.0.0";
+        src = pkgs.fetchurl {
+          url = "https://web.archive.org/web/20260124193912if_/https://download.ivao.aero/v2/softwares/aurora/98/files/latest/download";
+          hash = "sha256-yBPRoIm2raovm5/JaPXYJGB5ua/woKGTDTPE8IaF8ZY=";
+        };
+        appimageContents = pkgs.appimageTools.extractType2 { inherit pname version src; };
+      in
+        pkgs.appimageTools.wrapType2 {
+          inherit pname version src;
+          
+          extraPkgs = pkgs: [
+            pkgs.icu
+            pkgs.libinput
+            pkgs.libevdev
+          ];
+
+          extraInstallCommands = ''
+            install -Dm444 ${appimageContents}/aurora-electron.desktop -t $out/share/applications
+          '';
+        };
       waywall = pkgs.stdenv.mkDerivation {
         pname = "waywall";
         version = "0.0.0-ed76c2b605d19905617d9060536e980fd49410bf";
