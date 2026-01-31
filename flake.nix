@@ -95,6 +95,10 @@
 
           extraInstallCommands = ''
             install -Dm444 ${appimageContents}/aurora-electron.desktop -t $out/share/applications
+            substituteInPlace $out/share/applications/aurora-electron.desktop \
+              --replace-fail 'Exec=AppRun --no-sandbox %U' 'Exec=${pname}'
+            mkdir $out/share/icons
+            cp -r ${appimageContents}/usr/share/icons $out/share
           '';
         };
       waywall = pkgs.stdenv.mkDerivation {
