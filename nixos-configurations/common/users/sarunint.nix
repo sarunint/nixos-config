@@ -7,6 +7,7 @@
       "wheel" # Enable ‘sudo’ for the user.
       "docker"
       "podman"
+      "input"
     ]; 
     packages = with pkgs; [
       neovim
