@@ -8,5 +8,5 @@
       ./wifi7.nix
       ./no-zfs.nix
     ];
-  nixpkgs.hostPlatform = "x86_64-linux";
+  # nixpkgs.hostPlatform = "x86_64-linux";
 }
