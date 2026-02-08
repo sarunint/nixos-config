@@ -206,8 +206,8 @@
             modules = [
               ./nixos-configurations/sarunint-nixos/configuration.nix
               inputs.nixpkgs.nixosModules.readOnlyPkgs
-              ({ config, ...}: {
-                nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
+              ({ ... }: {
+                nixpkgs.pkgs = withSystem "x86_64-linux" (
                   { pkgs, ...}:
                   pkgs
                 );
@@ -220,8 +220,8 @@
             modules = [
               ./nixos-configurations/sarunint-workstation-nixos/configuration.nix
               inputs.nixpkgs.nixosModules.readOnlyPkgs
-              ({ config, ...}: {
-                nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
+              ({ ... }: {
+                nixpkgs.pkgs = withSystem "x86_64-linux" (
                   { pkgs, ...}:
                   pkgs
                 );
@@ -234,8 +234,8 @@
             modules = [
               ./nixos-configurations/sarunint-nixos-laptop/configuration.nix
               inputs.nixpkgs.nixosModules.readOnlyPkgs
-              ({ config, ...}: {
-                nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
+              ({ ... }: {
+                nixpkgs.pkgs = withSystem "x86_64-linux" (
                   { pkgs, ...}:
                   pkgs
                 );
@@ -248,8 +248,8 @@
             modules = [
               ./nixos-configurations/sarunint-live-cd/configuration.nix
               inputs.nixpkgs.nixosModules.readOnlyPkgs
-              ({ config, ...}: {
-                nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
+              ({ ... }: {
+                nixpkgs.pkgs = withSystem "x86_64-linux" (
                   { pkgs, ...}:
                   pkgs
                 );
