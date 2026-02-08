@@ -13,7 +13,6 @@
     ./packages.nix
     ./sound.nix
     ./timezone.nix
-    ./unfree.nix
     ./programs/gnupg.nix
     ./programs/kde-connect.nix
     ./programs/virt-manager.nix
