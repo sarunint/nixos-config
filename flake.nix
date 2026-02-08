@@ -190,6 +190,14 @@
             };
           sarunint-live-cd = self'.nixosConfigurations.sarunint-live-cd.config.system.build.isoImage;
         };
+
+        devShells = {
+          rust = (import ./dev-shells/rust/rust.nix { inherit pkgs; });
+          nodejs_18 = (import ./dev-shells/nodejs/18.nix { inherit pkgs; });
+          nodejs_20 = (import ./dev-shells/nodejs/20.nix { inherit pkgs; });
+          nodejs_22 = (import ./dev-shells/nodejs/22.nix { inherit pkgs; });
+          vscode_java = (import ./dev-shells/vscode/java.nix { inherit pkgs; });
+        };
       };
       flake = let
         pkgs = import nixpkgs {
@@ -227,12 +235,6 @@
               ];
             };
           };
-
-          devShells.x86_64-linux.rust = (import ./dev-shells/rust/rust.nix { inherit pkgs; });
-          devShells.x86_64-linux.nodejs_18 = (import ./dev-shells/nodejs/18.nix { inherit pkgs; });
-          devShells.x86_64-linux.nodejs_20 = (import ./dev-shells/nodejs/20.nix { inherit pkgs; });
-          devShells.x86_64-linux.nodejs_22 = (import ./dev-shells/nodejs/22.nix { inherit pkgs; });
-          devShells.x86_64-linux.vscode_java = (import ./dev-shells/vscode/java.nix { inherit pkgs; });
         };
     });
 }
