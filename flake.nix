@@ -17,8 +17,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, flake-parts, ... } @ inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } ({ ... } @ top: {
+  outputs = { flake-parts, ... } @ inputs:
+    flake-parts.lib.mkFlake { inherit inputs; } ({ withSystem, ... } @ top: {
       systems = [
         "x86_64-linux"
       ];
@@ -201,31 +201,59 @@
       };
       flake = {
         nixosConfigurations = {
-          sarunint-nixos = nixpkgs.lib.nixosSystem {
+          sarunint-nixos = inputs.nixpkgs.lib.nixosSystem {
             specialArgs = { inherit inputs; };
             modules = [
               ./nixos-configurations/sarunint-nixos/configuration.nix
+              inputs.nixpkgs.nixosModules.readOnlyPkgs
+              ({ config, ...}: {
+                nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
+                  { pkgs, ...}:
+                  pkgs
+                );
+              })
             ];
           };
 
-          sarunint-workstation-nixos = nixpkgs.lib.nixosSystem {
+          sarunint-workstation-nixos = inputs.nixpkgs.lib.nixosSystem {
             specialArgs = { inherit inputs; };
             modules = [
               ./nixos-configurations/sarunint-workstation-nixos/configuration.nix
+              inputs.nixpkgs.nixosModules.readOnlyPkgs
+              ({ config, ...}: {
+                nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
+                  { pkgs, ...}:
+                  pkgs
+                );
+              })
             ];
           };
 
-          sarunint-nixos-laptop = nixpkgs.lib.nixosSystem {
+          sarunint-nixos-laptop = inputs.nixpkgs.lib.nixosSystem {
             specialArgs = { inherit inputs; };
             modules = [
               ./nixos-configurations/sarunint-nixos-laptop/configuration.nix
+              inputs.nixpkgs.nixosModules.readOnlyPkgs
+              ({ config, ...}: {
+                nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
+                  { pkgs, ...}:
+                  pkgs
+                );
+              })
             ];
           };
 
-          sarunint-live-cd = nixpkgs.lib.nixosSystem {
+          sarunint-live-cd = inputs.nixpkgs.lib.nixosSystem {
             specialArgs = { inherit inputs; };
             modules = [
               ./nixos-configurations/sarunint-live-cd/configuration.nix
+              inputs.nixpkgs.nixosModules.readOnlyPkgs
+              ({ config, ...}: {
+                nixpkgs.pkgs = withSystem config.nixpkgs.hostPlatform.system (
+                  { pkgs, ...}:
+                  pkgs
+                );
+              })
             ];
           };
         };
