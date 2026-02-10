@@ -183,11 +183,11 @@
                   --prefix LD_LIBRARY_PATH : ${
                   pkgs.lib.makeLibraryPath [
                     pkgs.libxkbcommon
-                    pkgs.xorg.libX11
-                    pkgs.xorg.libXt
-                    pkgs.xorg.libXtst
-                    pkgs.xorg.libXinerama
-                    pkgs.xorg.libxcb
+                    pkgs.libx11
+                    pkgs.libxt
+                    pkgs.libxtst
+                    pkgs.libxinerama
+                    pkgs.libxcb
                   ]
                 }
 
