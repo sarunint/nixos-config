@@ -92,15 +92,15 @@
                 cp -r ${appimageContents}/usr/share/icons $out/share
               '';
             };
-          waywall = pkgs.stdenv.mkDerivation {
+          waywall = pkgs.stdenv.mkDerivation rec {
             pname = "waywall";
-            version = "0.0.0-ed76c2b605d19905617d9060536e980fd49410bf";
+            version = "0.0.0-a26e9f74307a6fe0e132f3e52171de08d8063d37";
 
             src = pkgs.fetchFromGitHub {
               owner = "tesselslate";
               repo = "waywall";
-              rev = "ed76c2b605d19905617d9060536e980fd49410bf";
-              hash = "sha256-bLIoGLXnBrn46EVk0PkGePslKYL7V/h1mnI+s9GFSnY=";
+              rev = "a26e9f74307a6fe0e132f3e52171de08d8063d37";
+              hash = "sha256-4yWlwHUOgmey6qpmCWBqAfzzA4RYh+a6dAuvH6JAgwY=";
             };
 
             patches = [
@@ -111,6 +111,7 @@
               pkgs.meson
               pkgs.pkg-config
               pkgs.ninja
+              pkgs.makeWrapper
             ];
 
             buildInputs = [
@@ -129,6 +130,17 @@
             dontUseNinjaBuild = true;
             dontUseNinjaCheck = true;
             dontUseNinjaInstall = true;
+
+            postInstall = ''
+              wrapProgram $out/bin/${pname} \
+              --prefix LD_LIBRARY_PATH : ${
+                  pkgs.lib.makeLibraryPath [
+                    pkgs.libxtst
+                    pkgs.libxkbcommon
+                    pkgs.libxt
+                  ]
+              }
+            '';
           };
           glfw-minecraft-waywall = let
             minecraftPatches = pkgs.fetchFromGitHub {
