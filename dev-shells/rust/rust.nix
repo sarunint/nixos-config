@@ -2,7 +2,7 @@
   pkgs ? import <nixpkgs> { },
 }:
 let
-  overrides = (builtins.fromTOML (builtins.readFile ./rust-toolchain.toml));
+  overrides = (fromTOML (builtins.readFile ./rust-toolchain.toml));
 in
 pkgs.callPackage (
   {
@@ -11,7 +11,7 @@ pkgs.callPackage (
     rustup,
     rustPlatform,
   }:
-  mkShell rec {
+  mkShell (finalAttrs: {
     strictDeps = true;
     nativeBuildInputs = [
       rustup
@@ -30,7 +30,7 @@ pkgs.callPackage (
     shellHook = ''
       export PATH="''${CARGO_HOME:-~/.cargo}/bin":"$PATH"
       export PATH="''${RUSTUP_HOME:-~/.rustup}/toolchains/$RUSTC_VERSION-${stdenv.hostPlatform.rust.rustcTarget}/bin":"$PATH"
-      export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${builtins.toString (pkgs.lib.makeLibraryPath buildInputs)}";
+      export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${toString (pkgs.lib.makeLibraryPath finalAttrs.buildInputs)}";
     '';
-  }
+  })
 ) { }

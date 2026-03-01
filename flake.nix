@@ -92,7 +92,7 @@
                 cp -r ${appimageContents}/usr/share/icons $out/share
               '';
             };
-          waywall = pkgs.stdenv.mkDerivation rec {
+          waywall = pkgs.stdenv.mkDerivation (finalAttrs: {
             pname = "waywall";
             version = "0.0.0-a26e9f74307a6fe0e132f3e52171de08d8063d37";
 
@@ -132,7 +132,7 @@
             dontUseNinjaInstall = true;
 
             postInstall = ''
-              wrapProgram $out/bin/${pname} \
+              wrapProgram $out/bin/${finalAttrs.pname} \
               --prefix LD_LIBRARY_PATH : ${
                   pkgs.lib.makeLibraryPath [
                     pkgs.libxtst
@@ -141,7 +141,7 @@
                   ]
               }
             '';
-          };
+          });
           glfw-minecraft-waywall = let
             minecraftPatches = pkgs.fetchFromGitHub {
               owner = "BoyOrigin";
@@ -169,12 +169,12 @@
               "-Dswing.aatext=true"
             ];
           in
-            pkgs.stdenv.mkDerivation rec {
+            pkgs.stdenv.mkDerivation (finalAttrs: {
               pname = "ninjabrainbot";
               version = "1.5.1";
 
               src = pkgs.fetchurl {
-                url = "https://github.com/Ninjabrain1/Ninjabrain-Bot/releases/download/${version}/Ninjabrain-Bot-${version}.jar";
+                url = "https://github.com/Ninjabrain1/Ninjabrain-Bot/releases/download/${finalAttrs.version}/Ninjabrain-Bot-${finalAttrs.version}.jar";
                 hash = "sha256-Rxu9A2EiTr69fLBUImRv+RLC2LmosawIDyDPIaRcrdw=";
               };
 
@@ -187,10 +187,10 @@
               installPhase = ''
                 runHook preInstall
 
-                install -Dm644 ${src} $out/share/java/${pname}-${version}.jar
+                install -Dm644 ${finalAttrs.src} $out/share/java/${finalAttrs.pname}-${finalAttrs.version}.jar
 
-                makeWrapper ${pkgs.jdk21}/bin/java $out/bin/${pname} \
-                  --add-flags "-jar $out/share/java/${pname}-${version}.jar" \
+                makeWrapper ${pkgs.jdk21}/bin/java $out/bin/${finalAttrs.pname} \
+                  --add-flags "-jar $out/share/java/${finalAttrs.pname}-${finalAttrs.version}.jar" \
                   --prefix _JAVA_OPTIONS : '${pkgs.lib.escapeShellArgs javaOptions}' \
                   --prefix LD_LIBRARY_PATH : ${
                   pkgs.lib.makeLibraryPath [
@@ -211,7 +211,7 @@
                 description = "Accurate stronghold calculator for Minecraft speedrunning.";
                 platforms = pkgs.lib.platforms.linux;
               };
-            };
+            });
           sarunint-live-cd = self'.nixosConfigurations.sarunint-live-cd.config.system.build.isoImage;
         };
 
