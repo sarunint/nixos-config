@@ -37,6 +37,14 @@
                 };
               });
             })
+            (self: super: {
+              prismlauncher-unwrapped = super.prismlauncher-unwrapped.overrideAttrs (final: prev: {
+                version = "10.0.5";
+                src = prev.src.overrideAttrs {
+                  hash = "sha256-cQBOdF3HP4CFOSfWyVXGQBs42V/A4w6R2UwelQTE3dQ=";
+                };
+              });
+            })
           ];
         };
 
