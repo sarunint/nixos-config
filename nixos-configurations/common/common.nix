@@ -38,5 +38,6 @@
     ./glfw-waywall-minecraft.nix
     ./fwupd.nix
     ./virtualisation.nix
+    ./joycond.nix
   ];
 }
