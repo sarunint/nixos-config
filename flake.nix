@@ -18,7 +18,7 @@
     };
   };
 
-  outputs = { flake-parts, ... } @ inputs:
+  outputs = { self, flake-parts, ... } @ inputs:
     flake-parts.lib.mkFlake { inherit inputs; } ({ withSystem, ... } @ top: {
       systems = [
         "x86_64-linux"
@@ -220,7 +220,7 @@
                 platforms = pkgs.lib.platforms.linux;
               };
             });
-          sarunint-live-cd = self'.nixosConfigurations.sarunint-live-cd.config.system.build.isoImage;
+          sarunint-live-cd = self.nixosConfigurations.sarunint-live-cd.config.system.build.isoImage;
         };
 
         devShells = {
@@ -279,7 +279,6 @@
             specialArgs = { inherit inputs; };
             modules = [
               ./nixos-configurations/sarunint-live-cd/configuration.nix
-              inputs.nixpkgs.nixosModules.readOnlyPkgs
               ({ ... }: {
                 nixpkgs.pkgs = withSystem "x86_64-linux" (
                   { pkgs, ...}:

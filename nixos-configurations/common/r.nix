@@ -14,6 +14,6 @@ in
 {
   environment.systemPackages = [
     R-with-my-packages
-    RStudio-with-my-packages
+    # RStudio-with-my-packages
   ];
 }
