@@ -39,5 +39,6 @@
     ./fwupd.nix
     ./virtualisation.nix
     ./joycond.nix
+    ./obs-virtual-camera.nix
   ];
 }
