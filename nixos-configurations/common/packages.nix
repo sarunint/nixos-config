@@ -46,5 +46,6 @@
     inputs.self.packages.x86_64-linux.ivao-aurora
     exfatprogs
     steam-devices-udev-rules
+    korrect
   ];
 }
