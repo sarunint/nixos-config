@@ -220,7 +220,7 @@
           nodejs_18 = (import ./dev-shells/nodejs/18.nix { inherit pkgs; });
           nodejs_20 = (import ./dev-shells/nodejs/20.nix { inherit pkgs; });
           nodejs_22 = (import ./dev-shells/nodejs/22.nix { inherit pkgs; });
-          vscode_java = (import ./dev-shells/vscode/java.nix { inherit pkgs; });
+          minecraft = (import ./dev-shells/minecraft/minecraft.nix { inherit pkgs; });
         };
       };
       flake = {
