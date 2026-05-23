@@ -229,6 +229,9 @@
             specialArgs = { inherit inputs; };
             modules = [
               ./nixos-configurations/sarunint-nixos/configuration.nix
+              ({ ... }: {
+                nix.registry.nixpkgs.flake = inputs.nixpkgs;
+              })
               inputs.nixpkgs.nixosModules.readOnlyPkgs
               ({ ... }: {
                 nixpkgs.pkgs = withSystem "x86_64-linux" (
@@ -243,6 +246,9 @@
             specialArgs = { inherit inputs; };
             modules = [
               ./nixos-configurations/sarunint-workstation-nixos/configuration.nix
+              ({ ... }: {
+                nix.registry.nixpkgs.flake = inputs.nixpkgs;
+              })
               inputs.nixpkgs.nixosModules.readOnlyPkgs
               ({ ... }: {
                 nixpkgs.pkgs = withSystem "x86_64-linux" (
@@ -257,6 +263,9 @@
             specialArgs = { inherit inputs; };
             modules = [
               ./nixos-configurations/sarunint-nixos-laptop/configuration.nix
+              ({ ... }: {
+                nix.registry.nixpkgs.flake = inputs.nixpkgs;
+              })
               inputs.nixpkgs.nixosModules.readOnlyPkgs
               ({ ... }: {
                 nixpkgs.pkgs = withSystem "x86_64-linux" (
@@ -271,6 +280,9 @@
             specialArgs = { inherit inputs; };
             modules = [
               ./nixos-configurations/sarunint-live-cd/configuration.nix
+              ({ ... }: {
+                nix.registry.nixpkgs.flake = inputs.nixpkgs;
+              })
               ({ ... }: {
                 nixpkgs.pkgs = withSystem "x86_64-linux" (
                   { pkgs, ...}:
