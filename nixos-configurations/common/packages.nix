@@ -15,7 +15,7 @@
     vscode-fhs
     prismlauncher
     inputs.self.packages.x86_64-linux.ferium
-    pass-wayland
+    (pass-wayland.withExtensions (exts: [ exts.pass-otp ]))
     qtpass
     qpwgraph
     vlc
