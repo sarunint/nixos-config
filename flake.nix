@@ -37,6 +37,29 @@
                 };
               });
             })
+            (self: super: {
+              musescore = super.musescore.overrideAttrs (final: prev: {
+                qtWrapperArgs = [
+                  # MuseScore JACK backend loads libjack at runtime.
+                  "--prefix"
+                  "${self.lib.optionalString self.stdenv.hostPlatform.isDarwin "DY"}LD_LIBRARY_PATH"
+                  ":"
+                  (self.lib.makeLibraryPath [ self.libjack2 ])
+                ]
+                ++ self.lib.optionals (self.stdenv.hostPlatform.isLinux) [
+                  "--set"
+                  "ALSA_PLUGIN_DIR"
+                  "${self.alsa-plugins}/lib/alsa-lib"
+                ]
+                ++ self.lib.optionals (!self.stdenv.hostPlatform.isDarwin) [
+                  # There are some issues with using the wayland backend, see:
+                  # https://musescore.org/en/node/321936
+                  "--set-default"
+                  "QT_QPA_PLATFORM"
+                  "xcb"
+                ];
+              });
+            })
           ];
         };
 
