@@ -60,6 +60,16 @@
                 ];
               });
             })
+            (self: super: {
+              muse-sounds-manager = super.muse-sounds-manager.overrideAttrs (final: prev: {
+                pname = "muse-sounds-manager";
+                version = "2.2.1.953";
+                src = self.fetchurl {
+                  url = "https://web.archive.org/web/20260710024139if_/https://muse-cdn.com/Muse_Sounds_Manager_x64.tar.gz";
+                  hash = "sha256-y7fKHh2pG8uT4p0vq20rsW8bSAp1mepkd2sW/06N3EI=";
+                };
+              });
+            })
           ];
         };
 
