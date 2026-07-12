@@ -75,7 +75,7 @@
             buildNumber = "260706075";
             src = pkgs.fetchurl {
               url = "https://cdn.jsdelivr.net/musescore/v${version}/MuseScore-Studio-${version}.${buildNumber}-x86_64.AppImage";
-              hash = "kjPtG4fT5rRXIiePPChtzUHoPad4vQ+Aod0ElJaWrZM=";
+              hash = "sha256-kjPtG4fT5rRXIiePPChtzUHoPad4vQ+Aod0ElJaWrZM=";
             };
             appimageContents = pkgs.appimageTools.extractType2 { inherit pname version src; };
           in
