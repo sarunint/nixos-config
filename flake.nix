@@ -71,11 +71,11 @@
           };
           musescore-appimage = let 
             pname = "musescore-appimage";
-            version = "4.6.5";
-            buildNumber = "253511702";
+            version = "4.7.4";
+            buildNumber = "260706075";
             src = pkgs.fetchurl {
               url = "https://cdn.jsdelivr.net/musescore/v${version}/MuseScore-Studio-${version}.${buildNumber}-x86_64.AppImage";
-              hash = "sha256-GT2qDqGLz6kKRxRahCJ1uAabeyuNFT5WKxX6tf5Q/K8=";
+              hash = "kjPtG4fT5rRXIiePPChtzUHoPad4vQ+Aod0ElJaWrZM=";
             };
             appimageContents = pkgs.appimageTools.extractType2 { inherit pname version src; };
           in
