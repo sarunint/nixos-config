@@ -27,17 +27,7 @@
         _module.args.pkgs = import inputs.nixpkgs {
           inherit system;
           config.allowUnfree = true;
-          overlays = [
-            (self: super: {
-              nix-output-monitor = super.nix-output-monitor.overrideAttrs (final: prev: {
-                version = "2.1.8-be6da5e31ab9a60b74af803cab48d787536635a3";
-                src = self.fetchzip {
-                  url = "https://code.maralorn.de/maralorn/nix-output-monitor/archive/be6da5e31ab9a60b74af803cab48d787536635a3.zip";
-                  hash = "sha256-KQhZIPXy45lKUvlUIw1ODRYdhYQ7yFkgCL6LEfJf1yU=";
-                };
-              });
-            })
-          ];
+          overlays = [];
         };
 
         packages = {
