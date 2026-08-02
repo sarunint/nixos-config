@@ -15,7 +15,7 @@
       ./fingerprint.nix
       ./bluetooth.nix
       ./wireguard.nix
-      ./lanzaboote/extra-mount-points.nix
+      # ./lanzaboote/extra-mount-points.nix
       inputs.lanzaboote.nixosModules.lanzaboote
       ./lanzaboote/lanzaboote.nix
       ./hosts.nix
