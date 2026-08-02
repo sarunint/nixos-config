@@ -128,16 +128,16 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1782141370,
-        "narHash": "sha256-hqijVSEETttmo8Okql9/LG0Ua34hdciKW1a5zzlj8mU=",
-        "owner": "nix-community",
+        "lastModified": 1785686383,
+        "narHash": "sha256-POuUUFFYXV1H/aL23el3YVOW8Ug2pvy5RTOc+cgWrEQ=",
+        "owner": "sarunint",
         "repo": "lanzaboote",
-        "rev": "7c9a54a7f87b4539ddbd8bda09a8a5f5f9361aa9",
+        "rev": "08be63cc2c86553ad8c94ff6fa68efcc69879e53",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
-        "ref": "v1.1.0",
+        "owner": "sarunint",
+        "ref": "xbootldr-efipatch",
         "repo": "lanzaboote",
         "type": "github"
       }
