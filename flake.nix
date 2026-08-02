@@ -9,7 +9,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     lanzaboote = {
-      url = "github:sarunint/lanzaboote/xbootldr-efipatch";
+      url = "github:sarunint/lanzaboote/v1.1.0-xbootldr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-parts = {
