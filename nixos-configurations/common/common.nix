@@ -16,6 +16,7 @@
     ./programs/gnupg.nix
     ./programs/kde-connect.nix
     ./programs/virt-manager.nix
+    ./programs/keybase.nix
     ./users/sarunint.nix
     ./hardware-clock.nix
     ./cloudflare-warp.nix
