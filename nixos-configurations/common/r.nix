@@ -13,7 +13,7 @@ let
 in 
 {
   environment.systemPackages = [
-    R-with-my-packages
+    # R-with-my-packages
     # RStudio-with-my-packages
   ];
 }
