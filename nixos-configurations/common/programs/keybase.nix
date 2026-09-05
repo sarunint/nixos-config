@@ -2,7 +2,7 @@
 
 {
   services.keybase.enable = true;
-  environment.systemPackages = [
-    pkgs.keybase-gui
-  ];
+  # environment.systemPackages = [
+  #   pkgs.keybase-gui
+  # ];
 }
