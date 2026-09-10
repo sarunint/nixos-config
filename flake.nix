@@ -46,13 +46,13 @@
           };
           musescore-appimage = let 
             pname = "musescore-appimage";
-            version = "4.7.4";
-            buildNumber = "260706075";
+            version = "4.7.5";
+            buildNumber = "260831071";
             src = pkgs.fetchurl {
               url = "https://cdn.jsdelivr.net/musescore/v${version}/MuseScore-Studio-${version}.${buildNumber}-x86_64.AppImage";
-              hash = "sha256-kjPtG4fT5rRXIiePPChtzUHoPad4vQ+Aod0ElJaWrZM=";
+              hash = "sha256-oxstotvMIZG8yYvre+XBXy9Re+2zRE3vlv4wiLdNOh4=";
             };
-            appimageContents = pkgs.appimageTools.extractType2 { inherit pname version src; };
+            appimageContents = pkgs.appimageTools.extract { inherit pname version src; };
           in
             pkgs.appimageTools.wrapType2 {
               inherit pname version src;
@@ -71,7 +71,7 @@
               url = "https://web.archive.org/web/20260124193912if_/https://download.ivao.aero/v2/softwares/aurora/98/files/latest/download";
               hash = "sha256-yBPRoIm2raovm5/JaPXYJGB5ua/woKGTDTPE8IaF8ZY=";
             };
-            appimageContents = pkgs.appimageTools.extractType2 { inherit pname version src; };
+            appimageContents = pkgs.appimageTools.extract { inherit pname version src; };
           in
             pkgs.appimageTools.wrapType2 {
               inherit pname version src;
