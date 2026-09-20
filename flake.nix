@@ -16,6 +16,10 @@
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
+    cpak = {
+      url = "github:Containerpak/cpak/v2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, flake-parts, ... } @ inputs:
@@ -238,6 +242,9 @@
                   pkgs
                 );
               })
+              ({ ... }: {
+                imports = [ inputs.cpak.nixosModules.default ];
+              })
             ];
           };
 
@@ -255,6 +262,9 @@
                   pkgs
                 );
               })
+              ({ ... }: {
+                imports = [ inputs.cpak.nixosModules.default ];
+              })
             ];
           };
 
@@ -271,6 +281,9 @@
                   { pkgs, ...}:
                   pkgs
                 );
+              })
+              ({ ... }: {
+                imports = [ inputs.cpak.nixosModules.default ];
               })
             ];
           };

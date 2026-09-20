@@ -41,5 +41,6 @@
     ./virtualisation.nix
     ./joycond.nix
     ./obs-virtual-camera.nix
+    ./cpak.nix
   ];
 }

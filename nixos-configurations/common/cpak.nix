@@ -1,0 +1,3 @@
+{ ... }: {
+  services.cpak.enable = true;
+}

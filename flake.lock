@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "cpak": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789291385,
+        "narHash": "sha256-WIZ7WdjHRLqFh/zFQ41zzs9zPKk1zdw212xY4MKsrLQ=",
+        "owner": "Containerpak",
+        "repo": "cpak",
+        "rev": "2d4511171ec63a94662ae6cfbb9e2e525b51ce0a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Containerpak",
+        "ref": "v2",
+        "repo": "cpak",
+        "type": "github"
+      }
+    },
     "crane": {
       "locked": {
         "lastModified": 1781825982,
@@ -221,6 +242,7 @@
     },
     "root": {
       "inputs": {
+        "cpak": "cpak",
         "flake-parts": "flake-parts",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
