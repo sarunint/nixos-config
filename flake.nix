@@ -32,29 +32,8 @@
           inherit system;
           config.allowUnfree = true;
           overlays = [
-            (self: super: {
-              fwupd = super.fwupd.overrideAttrs (final: prev: {
-                mesonFlags = map (
-                  flag: if self.lib.hasPrefix "-Defi_app_location=" flag then "-Defi_app_location=/run/fwupd-efi" else flag
-                ) prev.mesonFlags;
-              });
-            })
-            (self: super: 
-              let
-                noOverride = super.lib.versionAtLeast super.musescore.version "4.7.5";
-              in
-                {
-                  musescore = super.lib.warnIf noOverride ''
-                    MuseScore Studio >= 4.7.5 is now in nixpkgs, the overlay can be removed.
-                  ''
-                  super.musescore.overrideAttrs (final: prev: {
-                    version = "4.7.5";
-                    src = prev.src.overrideAttrs {
-                      hash = "sha256-WzVsItF4cyhd99Ax0BWkiX3JoxPY9+xpag7fu8yORD0=";
-                    };
-                  });
-                }
-            )
+            (import ./nixos-configurations/common/overlays/fwupd.nix)
+            (import ./nixos-configurations/common/overlays/musescore.nix)
           ];
         };
 
