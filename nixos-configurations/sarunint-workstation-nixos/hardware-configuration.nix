@@ -12,6 +12,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [ "plymouth.use-simpledrm" ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/78acd0db-debb-48f0-ae54-59763f449b11";
