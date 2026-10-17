@@ -64,7 +64,7 @@
     {
       device = "/dev/disk/by-uuid/584C-6C26";
       fsType = "exfat";
-      options = [ "uid=sarunint" "gid=users" ];
+      options = [ "uid=sarunint" "gid=users" "nofail" ];
     };
 
   swapDevices =
