@@ -35,6 +35,7 @@
             (import ./nixos-configurations/common/overlays/fwupd.nix)
             (import ./nixos-configurations/common/overlays/musescore.nix)
             (import ./nixos-configurations/common/overlays/zotero/overlay.nix)
+            (import ./nixos-configurations/common/overlays/kde-baloo.nix)
           ];
         };
 
