@@ -15,7 +15,7 @@ self: super:
               hash = "sha256-S2zV9nJ007mG0+r9H8X3R2O6VcwddXdwPknlnaaBiDg=";
             })
             (super.fetchpatch2 {
-              url = "https://invent.kde.org/frameworks/baloo/-/commit/63c473368dc0055d9d852a2a59666aec718c89e7.patch";
+              url = "https://invent.kde.org/frameworks/baloo/-/commit/a5431882c8cb36116907f59c97b0d2d92a7fe543.patch";
               hash = "sha256-mjTt5M7rtpW8tAgtCWswG/Q0GRIVvbOm+62behSSfkI=";
             })
           ];
