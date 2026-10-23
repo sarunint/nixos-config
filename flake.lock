@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792692396,
-        "narHash": "sha256-etWhMnRqBap1KUPZLnHWZbe3VFg8xN81p58o0NCozhg=",
+        "lastModified": 1792768455,
+        "narHash": "sha256-ZOaMIEYtiAoDXKZ6Ob+5DBwsicphEr4956idWbnffgo=",
         "owner": "Containerpak",
         "repo": "cpak",
-        "rev": "07ca317a706237c39f3eb58d7a5ec599eef3449d",
+        "rev": "ab4bfd1db405d05f1f9d8f8f129e3e34d61fa5f0",
         "type": "github"
       },
       "original": {
