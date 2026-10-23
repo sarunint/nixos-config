@@ -36,6 +36,7 @@
             (import ./nixos-configurations/common/overlays/musescore.nix)
             (import ./nixos-configurations/common/overlays/zotero/overlay.nix)
             (import ./nixos-configurations/common/overlays/kde-baloo.nix)
+            (import ./nixos-configurations/common/overlays/v4l2loopback.nix)
           ];
         };
 
