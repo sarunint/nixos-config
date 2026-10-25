@@ -8,6 +8,7 @@
       "docker"
       "podman"
       "input"
+      "dialout"
     ]; 
     packages = with pkgs; [
       neovim
