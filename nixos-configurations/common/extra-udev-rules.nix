@@ -13,5 +13,14 @@
   ENV{ID_PART_ENTRY_SCHEME}=="gpt", \
     ENV{ID_PART_ENTRY_TYPE}=="c12a7328-f81f-11d2-ba4b-00a0c93ec93b|21686148-6449-6e6f-744e-656564454649|a19d880f-05fc-4d3b-a006-743f0f84911e|e6d6d379-f507-44c2-a23c-238f2a3df928|e3c9e316-0b5c-4db8-817d-f92df00215ae|de94bba4-06d1-4d40-a16a-bfd50179d6ac", \
     ENV{UDISKS_IGNORE}="0"
+  
+  KERNEL=="hidraw*", \
+    SUBSYSTEM=="hidraw", \
+    ATTRS{idVendor}=="3434", \
+    ATTRS{idProduct}=="0c60", \
+    MODE="0660", \
+    GROUP="users", \
+    TAG+="uaccess", \
+    TAG+="udev-acl"
   '';
 }

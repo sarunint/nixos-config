@@ -24,7 +24,7 @@
     ./hyprland.nix
     ./java.nix
     ./firewall.nix
-    ./mount-efi-partitions.nix
+    ./extra-udev-rules.nix
     ./yubikey.nix
     ./kde.nix
     ./programs/browserpass.nix
