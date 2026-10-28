@@ -33,7 +33,6 @@
           config.allowUnfree = true;
           overlays = [
             (import ./nixos-configurations/common/overlays/fwupd.nix)
-            (import ./nixos-configurations/common/overlays/kde-baloo.nix)
             (import ./nixos-configurations/common/overlays/v4l2loopback.nix)
           ];
         };
