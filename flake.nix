@@ -31,6 +31,9 @@
         _module.args.pkgs = import inputs.nixpkgs {
           inherit system;
           config.allowUnfree = true;
+          config.permittedInsecurePackages = [
+            "firefox-esr-140-bin-unwrapped-140.17.0esr"
+          ];
           overlays = [
             (import ./nixos-configurations/common/overlays/fwupd.nix)
           ];
