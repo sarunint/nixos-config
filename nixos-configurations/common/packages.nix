@@ -48,5 +48,6 @@
     steam-devices-udev-rules
     korrect
     git-lfs
+    kwi
   ];
 }

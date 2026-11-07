@@ -20,6 +20,10 @@
       url = "github:Containerpak/cpak/v2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    kwi = {
+      url = "github:wito-dev/nix-kwi";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, flake-parts, ... } @ inputs:
@@ -36,6 +40,7 @@
           ];
           overlays = [
             (import ./nixos-configurations/common/overlays/fwupd.nix)
+            inputs.kwi.overlays.default
           ];
         };
 

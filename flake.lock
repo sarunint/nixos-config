@@ -117,6 +117,43 @@
         "type": "github"
       }
     },
+    "kwi": {
+      "inputs": {
+        "kwi-src": "kwi-src",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794034734,
+        "narHash": "sha256-B1Dm32+sj5zC7htDJvKkmviO7OeLPknJ1OLXsH7KLW4=",
+        "owner": "wito-dev",
+        "repo": "nix-kwi",
+        "rev": "bba23a3ab3b589338730bca86e69fe61fe93220e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wito-dev",
+        "repo": "nix-kwi",
+        "type": "github"
+      }
+    },
+    "kwi-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793929877,
+        "narHash": "sha256-hAIJsTmqe0EIOPyQFT8ukim4SCBpXITyEH2r6z7rRbA=",
+        "ref": "refs/heads/master",
+        "rev": "61e6e7f78a78c9fa59e86b8c5d583588792dd5ee",
+        "revCount": 82,
+        "type": "git",
+        "url": "https://invent.kde.org/utilities/kwi.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://invent.kde.org/utilities/kwi.git"
+      }
+    },
     "lanzaboote": {
       "inputs": {
         "crane": "crane",
@@ -221,6 +258,7 @@
       "inputs": {
         "cpak": "cpak",
         "flake-parts": "flake-parts",
+        "kwi": "kwi",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",
