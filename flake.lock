@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794032875,
-        "narHash": "sha256-ppz4Fzx960vvrK01HzeTL8Lv9yQ9cYhx8KwCYHAprlY=",
+        "lastModified": 1794243029,
+        "narHash": "sha256-5U1cCS/kJm7QyoGQtNA6uDRrkbu8hl3YWEx3dids3GM=",
         "owner": "Containerpak",
         "repo": "cpak",
-        "rev": "9d028e2d255b52934f332a60f2720960ae0e8922",
+        "rev": "013dc3922ba693d98d0c7b1be1978356e8649046",
         "type": "github"
       },
       "original": {
@@ -125,11 +125,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794214721,
-        "narHash": "sha256-gTVA68aoKjms9FgqBFv/G2TBDFW93VeZTg9ZWliV8rA=",
+        "lastModified": 1794483373,
+        "narHash": "sha256-lYE8RH7K+o0/rsL2hwrbQLc14RZWpNwN8WsUywuyOEs=",
         "owner": "wito-dev",
         "repo": "nix-kwi",
-        "rev": "da6baf86fc65964e526591234a5938a033c618a0",
+        "rev": "c2ca05786716e89368022df03a267f87a9937014",
         "type": "github"
       },
       "original": {
@@ -141,11 +141,11 @@
     "kwi-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1794176177,
-        "narHash": "sha256-I7DjwSTC7kV3H0XokmC0aeGI6aQQ3vq7cOUkkbgQ+1Q=",
+        "lastModified": 1794419214,
+        "narHash": "sha256-8UcTHz/vef+r8vNPQcpRy4vz+Kn/D/ZWC7GscubnpcI=",
         "ref": "refs/heads/master",
-        "rev": "1df87417056b4b44085845b7fd273fe95bb0e42f",
-        "revCount": 101,
+        "rev": "8f46921fabddc52c7cf3dae59987799a671f96b4",
+        "revCount": 110,
         "type": "git",
         "url": "https://invent.kde.org/utilities/kwi.git"
       },
@@ -180,11 +180,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1794042290,
-        "narHash": "sha256-ziZn2PvCJE5JEEpqTdxXwJpPB+L3YqoCpTAMCzyaP3U=",
+        "lastModified": 1794386569,
+        "narHash": "sha256-x9sADJvoVG0L6RejZB+/BB4YiGZFBZrfTlhF4uBq1tQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f4a03c008967841f2a0b3cb7c436fc6fc31671f6",
+        "rev": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
         "type": "github"
       },
       "original": {
@@ -196,11 +196,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1793865203,
-        "narHash": "sha256-/cpdPHaySDIyCgZI6EWngiM6jK3YLUNzv1b7lTzy6Bk=",
+        "lastModified": 1794165970,
+        "narHash": "sha256-XuAV2cUwaod3Bt4XFVqiXz3v1w2ex16W6Sv4S7EWres=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c56a87d8e41ce69bd2af57eb35dcc117a9dfca33",
+        "rev": "ac588ef1c914865dad517b337ea0eb9694a4021c",
         "type": "github"
       },
       "original": {
