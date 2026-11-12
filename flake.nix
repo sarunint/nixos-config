@@ -18,7 +18,6 @@
     };
     cpak = {
       url = "github:Containerpak/cpak/v2";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     kwi = {
       url = "github:wito-dev/nix-kwi";
