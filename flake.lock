@@ -123,11 +123,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794569170,
-        "narHash": "sha256-ZnvK2JCd6P0M8LjBFjDjeJO60G63m1wVN2k8mxMWGLw=",
+        "lastModified": 1794741653,
+        "narHash": "sha256-ml9rcqnRtdxp56xFUIF1tE1+SWpvqkVdgyxfVvxbax8=",
         "owner": "wito-dev",
         "repo": "nix-kwi",
-        "rev": "c995ce6174670134d67f67d061325224bd3e3e62",
+        "rev": "9c891a09dbc560014d48d732676a04dfe7b40a79",
         "type": "github"
       },
       "original": {
@@ -139,11 +139,11 @@
     "kwi-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1794531770,
-        "narHash": "sha256-4snIhN5owh8CIE0Jfd4pahTylAsVCqLxAxS9cGmZiy4=",
+        "lastModified": 1794728810,
+        "narHash": "sha256-rHQb5UjoGesCxtJGGeTNv/1SgVgOIpdYjURhxPePKUE=",
         "ref": "refs/heads/master",
-        "rev": "0b3801c630ad97bae21faffc0642afcbbab69549",
-        "revCount": 115,
+        "rev": "1c12eb174e4deff408eeea01aff534106fc7a2b1",
+        "revCount": 133,
         "type": "git",
         "url": "https://invent.kde.org/utilities/kwi.git"
       },
@@ -210,11 +210,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1794386569,
-        "narHash": "sha256-x9sADJvoVG0L6RejZB+/BB4YiGZFBZrfTlhF4uBq1tQ=",
+        "lastModified": 1794537146,
+        "narHash": "sha256-Wpz/7x/YWnDIBu7yj6ixe8j6fIMsidd9Y+o1PqPF3iM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
+        "rev": "d5cc6833999746cffdfe0598f7bc801a57b887a9",
         "type": "github"
       },
       "original": {
