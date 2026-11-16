@@ -42,5 +42,6 @@
     ./joycond.nix
     ./obs-virtual-camera.nix
     ./cpak.nix
+    ./tex.nix
   ];
 }
