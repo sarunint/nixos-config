@@ -1,9 +1,7 @@
 { pkgs, ... }: {
   environment.systemPackages =
     let
-      tex = pkgs.texliveBasic.withPackages (
-        ps: []
-      );
+      tex = pkgs.texliveFull;
     in
       [
         tex
