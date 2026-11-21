@@ -49,5 +49,6 @@
     korrect
     git-lfs
     kwi
+    rom
   ];
 }
