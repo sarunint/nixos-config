@@ -50,5 +50,6 @@
     git-lfs
     kwi
     rom
+    appimage-run
   ];
 }
