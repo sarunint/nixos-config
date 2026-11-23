@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795071838,
-        "narHash": "sha256-8V49Qg4sbzEIZNUoAY0x5uod/FQ78fjqVi3n171fNWc=",
+        "lastModified": 1795408974,
+        "narHash": "sha256-dahophJljhjRiXjFShsN8bCrzfAa3C6P081wtb7XP4w=",
         "owner": "Containerpak",
         "repo": "cpak",
-        "rev": "ed3a0692d8a4219ebb123d36a8e9c2bd06535973",
+        "rev": "5f7200f68a2e0a31508acaab79bf4e1a6f8e0069",
         "type": "github"
       },
       "original": {
@@ -125,11 +125,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795260697,
-        "narHash": "sha256-HQaJKZAsQ98PREZb1k/3Nm4fPGJSHuAyMQmQ6w3S4C0=",
+        "lastModified": 1795440050,
+        "narHash": "sha256-FU1SqiZt/RmxDqOoNF3ppO3LtRqztdY0ufze7OfizM8=",
         "owner": "wito-dev",
         "repo": "nix-kwi",
-        "rev": "d46a4b2ee05c8ab7b6cd1cf8e6f8e60a0112ac64",
+        "rev": "4f45d79239f940f2c2f618e0e46d858857e6062d",
         "type": "github"
       },
       "original": {
@@ -141,11 +141,11 @@
     "kwi-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1795228738,
-        "narHash": "sha256-AAktFxDFAYtQQUp7bouuHCZvKfBxD6PWu00sDlrs6Ao=",
+        "lastModified": 1795402247,
+        "narHash": "sha256-OhsPuXx4JSAvKw1ufuTTKd3bt+MI3jO9hJ+cl00mvJg=",
         "ref": "refs/heads/master",
-        "rev": "352a3c1943b8c7427653c2803e70e2f343b6288a",
-        "revCount": 173,
+        "rev": "3424788988b47b5b76c30107eb159faae94322d1",
+        "revCount": 185,
         "type": "git",
         "url": "https://invent.kde.org/utilities/kwi.git"
       },
@@ -180,11 +180,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1795085501,
-        "narHash": "sha256-S5keGWzaKpuXo9MNoIC2FfTIuTyTnx8P4NhYJMEsTLI=",
+        "lastModified": 1795234589,
+        "narHash": "sha256-f/VVvxf5RsQgWVhUtefoca5ktVg0DA2bnkMOcmSnozo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "0bb8272318b4ca41bf0edc6224df3e3e3046b70d",
+        "rev": "2786a2a72088ecf32aea5b3ec52099e6a7cff78f",
         "type": "github"
       },
       "original": {
@@ -196,11 +196,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1795137884,
-        "narHash": "sha256-iKXCN36qYfBni+3nH4vAd98/kshoIsPB2S9mYWhma30=",
+        "lastModified": 1795370043,
+        "narHash": "sha256-s/0jq8usZtLVOolYBwmyUmd3JsfAu7w3FU+a0dgMqSY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "ab5c18fdedfc8f9bbc9d773f10a540790e2787a7",
+        "rev": "0dc498bfe49baeb18b0f9891e800b53bb2603193",
         "type": "github"
       },
       "original": {
@@ -241,11 +241,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795006257,
-        "narHash": "sha256-gi5qBKPXVGRkHBymflAIBG/tVqpsSO1cIjlHvp693iI=",
+        "lastModified": 1795432998,
+        "narHash": "sha256-1loFPHcZ8NegLa42gKRHCvf1/2Ut6rElO+bMW0igxiI=",
         "owner": "PrismLauncher",
         "repo": "meta",
-        "rev": "eca2ecfaad8a88d4780fc6269e5d41eb87b60c22",
+        "rev": "1416f98cdaf07a8927478ff2819630a040cadf69",
         "type": "github"
       },
       "original": {
